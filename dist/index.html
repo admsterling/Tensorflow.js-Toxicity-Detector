@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxicity Detector</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/materialize.2987ecb4.css" media="screen,projection">
+<script src="/materialize.2987ecb4.js"></script><link rel="stylesheet" href="/client.746751b5.css"></head>
+
+<body>
+    <nav class="teal">
+        <div class="nav-wrapper container">
+            <a href="#" style="font-size: 40px;">
+                <i class="material-icons right">forum</i>
+                Toxicity Detector
+            </a>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 50px;">
+        <div class="row">
+            <div class="col s12">
+                <blockquote id="init"></blockquote>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select>
+                    <option value="" disabled="">Choose Option</option>
+                    <option value="1" selected="">New Client TF.js trained model</option>
+                    <option value="2">Pre-trained model with transfer learning</option>
+                    <option value="3">Toxicity pre-trained Model</option>
+                </select>
+                <label>Model</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <!-- Switch -->
+                <p class="pink-text" style="margin-bottom: 10px;">Toggle Visor</p>
+                <a id="btn_visor" class="btn">
+                    Hide / Show Visor
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <div class="card-content">
+                    <p>Choose the model option, build model and test your predictions</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#tabBuild">Build Model</a></li>
+                        <li class="tab"><a href="#tabPrediction">Test Predictions</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-5">
+                    <div id="tabBuild">
+                        <div class="row">
+                            <a id="btn_train" class="waves-effect waves-light btn">
+                                <i class="material-icons right">ac_unit</i>
+                                Train Model
+                            </a>
+                        </div>
+                    </div>
+                    <div id="tabPrediction">
+                        <div class="row">
+                            <a id="btn_load" class="pink waves-effect waves-light btn">
+                                <i class="material-icons right">get_app</i>
+                                Load Model
+                            </a>
+                        </div>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s9">
+                                        <textarea id="textarea-message" class="materialize-textarea"></textarea>
+                                        <label for="textarea-message">
+                                            Type your message here ...
+                                        </label>
+                                    </div>
+                                    <div class="col s3">
+                                        <a id="btn_predict" class="disabled pink waves-light btn valign-wrapper">
+                                            <i class="material-icons right">send</i>Predict
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 left" id="chip_result"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/client.746751b5.js"></script>
+    <script type="text/javascript" src="/materialize.aa99ebee.js"></script>
+</body>
+
+</html>
