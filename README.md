@@ -2,7 +2,7 @@
 
 This project had me develop a Neural Network using Tensorflow.js that makes use of a front end for user control.
 
-The project can be viewed [here]()
+The project can be viewed [here](https://admsterling.github.io/Tensorflow.js-Toxicity-Detector/)
 
 ---
 
